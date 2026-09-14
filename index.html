@@ -100,9 +100,9 @@ function renderContent(c) {
     '<div class="county-body">'+
     '<div class="county-top"><span class="county-name">'+c.n+'</span><span class="county-prov">'+c.p+'</span></div>'+
     (c.w?'<p class="why">'+c.w+'</p>':'')+
-    (c.h if c.h else '')+
-    (c.r if c.r else '')+
-    (c.c if c.c else '')+
+    (c.h ? c.h : '')+
+    (c.r ? c.r : '')+
+    (c.c ? c.c : '')+
     '</div>';
   $content.scrollIntoView({behavior:'smooth', block:'start'});
 }
