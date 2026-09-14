@@ -33,6 +33,7 @@ header p{opacity:.85;font-size:.74em;margin-left:8px;display:inline}
 .county-prov{font-size:.85em;color:#a89a86;background:#f6efe5;padding:3px 10px;border-radius:12px}
 .county-body h4{color:#C96B2B;font-size:.95em;margin:16px 0 6px;font-weight:600;letter-spacing:1px}
 .county-body h4::after{content:"";display:block;width:34px;height:3px;background:#D2691E;border-radius:2px;margin-top:4px}
+.county-body h4 .gloss{font-size:.66em;font-weight:400;color:#b09a86;letter-spacing:.5px;margin-left:4px;text-transform:none}
 .county-body p{margin-bottom:8px;font-size:.95em;text-indent:2em}
 .county-body p.why{color:#6b5a44;font-style:normal;text-indent:0;border-left:3px solid #D2691E;padding:10px 12px;background:#fff7ec;border-radius:0 6px 6px 0;margin-bottom:6px}
 .county-body p.comment{background:#fff3e2;padding:12px 14px;border-radius:8px;text-indent:0;font-size:.93em;color:#7a5c3a}
@@ -99,9 +100,9 @@ function renderContent(c) {
     '<div class="county-body">'+
     '<div class="county-top"><span class="county-name">'+c.n+'</span><span class="county-prov">'+c.p+'</span></div>'+
     (c.w?'<p class="why">'+c.w+'</p>':'')+
-    (c.h?'<h4>存废对照</h4>'+c.h: '')+
-    (c.r?'<h4>遗存实物</h4>'+c.r:'')+
-    (c.c?'<h4>小色块评论</h4>'+c.c:'')+
+    (c.h?'<h4>存废对照 <span class="gloss">Rise &amp; Fall</span></h4>'+c.h: '')+
+    (c.r?'<h4>遗存实物 <span class="gloss">Living Relics</span></h4>'+c.r:'')+
+    (c.c?'<h4>小色块评论 <span class="gloss">Local Voices</span></h4>'+c.c:'')+
     '</div>';
   $content.scrollIntoView({behavior:'smooth', block:'start'});
 }
